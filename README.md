@@ -21,6 +21,7 @@ Customizable alerts trigger notifications when vibration thresholds are exceeded
 Adjust sensor sensitivity and alert thresholds based on user preference.
 
 Provides quick-access emergency actions and safety information.
-🆘 Emergency Support Screen![mscren](https://github.com/user-attachments/assets/010ec0ab-43c6-48ad-b9ed-c4f60015bc97)
-![map](https://github.com/user-attachments/assets/0a125bcb-4253-46a1-a885-e281ed95a91c)
-![set](https://github.com/user-attachments/assets/7910fd2e-dbf8-484b-928b-bab369ea8463)
+![mscren](https://github.com/user-attachments/assets/53d0f485-95c8-4de0-9a09-9e7b3126cd2e)
+![map](https://github.com/user-attachments/assets/23b8ab7a-3231-47c0-8a7d-f0de2daf0e70)
+![set](https://github.com/user-attachments/assets/8a13420c-1120-4ef1-9e33-8974d1a03ff0)
+

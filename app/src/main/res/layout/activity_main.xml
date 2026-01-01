@@ -1,0 +1,174 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- APP HEADER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="QuakeAlert"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:textColor="#1E1B4B"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Earthquake Detection "
+                android:textSize="14sp"
+                android:textColor="#4F46E5"/>
+        </LinearLayout>
+
+        <!-- STATUS CARD -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="8dp"
+            android:layout_marginBottom="20dp"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:padding="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LIVE STATUS"
+                    android:textStyle="bold"
+                    android:textColor="#020617"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView
+                    android:id="@+id/currentSensor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sensor Sensitivity: 10"
+                    android:textSize="16sp"
+                    android:textColor="#334155"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:id="@+id/currentMagnitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Magnitude Threshold: ≥ 4"
+                    android:textSize="16sp"
+                    android:textColor="#334155"
+                    android:layout_marginBottom="14dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shake Intensity"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="#1E293B"
+                    android:layout_marginBottom="6dp"/>
+
+                <ProgressBar
+                    android:id="@+id/shakeProgress"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:max="50"
+                    android:progress="0"
+                    android:progressTint="#4F46E5"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:id="@+id/shakeValueText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current Shake: 0"
+                    android:textSize="14sp"
+                    android:textColor="#475569"
+                    android:layout_marginBottom="12dp"/>
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/magnitudeChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="12dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ACTION CENTER -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="8dp"
+            android:layout_marginBottom="20dp"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:padding="15dp"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Action Center"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="#020617"
+                    android:layout_marginBottom="16dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/mapBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="🗺 View Earthquake Map"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/settingsBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="⚙ Configure Alerts  Sensitivity"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/emergencyBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:backgroundTint="#B91C1C"
+                    android:textColor="@android:color/white"
+                    android:text="🚨 Emergency SOS"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- FOOTER -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Designed for safety. Built for reliability."
+            android:textSize="12sp"
+            android:textColor="#64748B"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+</ScrollView>
